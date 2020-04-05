@@ -1,6 +1,2 @@
 pandas
 bokeh
-dill
-flask
-jinja2
-simplejson
