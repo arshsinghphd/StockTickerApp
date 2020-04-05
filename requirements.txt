@@ -2,7 +2,7 @@ bokeh
 django
 django-heroku
 flask
-gunicorn
+gunicorn==19.3.0
 os
 pandas
 quandl
