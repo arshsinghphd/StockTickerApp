@@ -6,6 +6,7 @@ gunicorn
 jinja2
 os
 pandas
+pip3
 quandl
 requests>2.20.0
 simplejson
