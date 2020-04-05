@@ -1,0 +1,11 @@
+bokeh
+django
+django-heroku
+flask
+gunicorn
+jinja2
+os
+pandas
+quandl
+requests>2.20.0
+simplejson

@@ -1,0 +1,10 @@
+Merge branch 'master' of https://github.com/arshsinghphd/arshMilestoneProject
+
+# Conflicts:
+#	Procfile
+#	Procfile.windows
+#	README.md
+#	app.py
+#	conda-requirements.txt
+#	requirements.txt
+#	runtime.txt
