@@ -3,7 +3,6 @@ django
 django-heroku
 flask
 gunicorn==19.3.0
-os
 pandas
 quandl
 requests>2.20.0

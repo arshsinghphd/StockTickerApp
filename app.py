@@ -2,7 +2,7 @@ from bokeh.plotting import figure
 from bokeh.palettes import Spectral11
 from bokeh.embed import components 
 from flask import Flask,render_template,request,redirect,session
-import os
+#import os
 import pandas as pd
 import quandl
 import requests
