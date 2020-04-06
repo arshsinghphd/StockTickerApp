@@ -28,15 +28,18 @@ def graph():
     df.reset_index(inplace=True)
     pd.to_datetime(df['Date'],infer_datetime_format=True)
     source=ColumnDataSource(df)
-    p = figure(title='Stock prices for %s' % app.vars['ticker'], x_axis_label='Date', x_axis_type='datetime')
-    if request.form.get('Close'):
-        p.line(x='Date', y='Close',source=source, line_width=2, line_color="green", legend_label='Close')
-    if request.form.get('Adj. Close'):
-        p.line(x='Date', y='Adj. Close',source=source, line_width=2, line_color="black", legend_label='Adj. Close')
-    if request.form.get('Open'):
-        p.line(x='Date', y='Open',source=source, line_width=2, line_color="red", legend_label='Open')
-    if request.form.get('Adj. Open'):
-        p.line(x='Date', y='Adj. Open',source=source, line_width=2, line_color="blue", legend_label='Adj. Open') 
+##    p = figure(title='Stock prices for %s' % app.vars['ticker'], x_axis_label='Date', x_axis_type='datetime')
+###   Plotting using  ColumnDataSource       
+##    if request.form.get('Close'):
+##        p.line(x='Date', y='Close',source=source, line_width=2, line_color="green", legend_label='Close')
+##    if request.form.get('Adj. Close'):
+##        p.line(x='Date', y='Adj. Close',source=source, line_width=2, line_color="black", legend_label='Adj. Close')
+##    if request.form.get('Open'):
+##        p.line(x='Date', y='Open',source=source, line_width=2, line_color="red", legend_label='Open')
+##    if request.form.get('Adj. Open'):
+##        p.line(x='Date', y='Adj. Open',source=source, line_width=2, line_color="blue", legend_label='Adj. Open') 
+
+###  Older plotting 
 ##    if request.form.get('Close'):
 ##        p.line(x=df['Date'].values, y=df['Close'].values,line_width=2, line_color="green", legend_label='Close')
 ##    if request.form.get('Adj. Close'):
@@ -45,8 +48,10 @@ def graph():
 ##        p.line(x=df['Date'].values, y=df['Open'].values,line_width=2, line_color="red", legend_label='Open')
 ##    if request.form.get('Adj. Open'):
 ##        p.line(x=df['Date'].values, y=df['Adj. Open'].values,line_width=2, line_color="purple", legend_label='Adj. Open')
-##    p = figure()
-##    p.circle([1,2], [3,4])
+
+#  Testing 
+    p = figure()
+    p.circle([1,2], [3,4])
     script, div = components(p)
     return render_template('graph.html', script=script, div=div)
   
