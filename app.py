@@ -3,7 +3,6 @@ from bokeh.plotting import figure
 from bokeh.palettes import Spectral11
 from bokeh.embed import components 
 from flask import Flask,render_template,request,redirect,session
-#import os
 import pandas as pd
 import quandl
 import requests
@@ -45,7 +44,4 @@ def graph():
     return render_template('graph.html', script=script, div=div)
   
 if __name__ == '__main__':
-  # myport = int(os.environ.get("PORT", 5000))
-  # myhost='0.0.0.0'
-  # app.run(host=myhost, port=myport, debug=True)
   app.run()
